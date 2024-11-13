@@ -22,8 +22,12 @@ const Calculate = () => {
     const errorAmount = document.getElementById("error-amount");
     const errorTerm = document.getElementById("error-term");
     const errorRate = document.getElementById("error-interest");
-    const repaymentRadio = document.getElementById("repayment");
-    const interestRadio = document.getElementById("interest");
+    const repaymentRadio = document.getElementById(
+      "repayment"
+    ) as HTMLInputElement;
+    const interestRadio = document.getElementById(
+      "interest"
+    ) as HTMLInputElement;
     const errorRadio = document.getElementById("error-radio");
 
     const spanAmount = document.getElementById("span-amount");
@@ -96,8 +100,12 @@ const Calculate = () => {
     setMortgageAmount("");
     setMortgageTerm("");
     setMortgageInterest("");
-    const repaymentRadio = document.getElementById("repayment");
-    const interestRadio = document.getElementById("interest");
+    const repaymentRadio = document.getElementById(
+      "repayment"
+    ) as HTMLInputElement;
+    const interestRadio = document.getElementById(
+      "interest"
+    ) as HTMLInputElement;
     repaymentRadio!.checked = false;
     interestRadio!.checked = false;
     const calculating = document.getElementById("calculating");
