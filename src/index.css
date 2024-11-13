@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: 'DM Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: hsl(202, 86%, 94%);
+}
+
+.mortgage-amount,
+.cal-mor-int {
+    cursor: pointer;
+}
+
+.mortgage-amount div:hover span {
+    background: hsl(61, 70%, 52%);
+}
+
+
+.cal-mor-int div:hover span {
+    background: hsl(61, 70%, 52%);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#repayment:checked+div .sec-dev {
+    background-color: hsl(61, 70%, 52%);
+}
+
+#interest:checked+div .sec-dev {
+    background-color: hsl(61, 70%, 52%);
+}
+
+#repayment:checked~label {
+    background-color: hsl(61, 70%, 52%);
+}
+
+#label-repay+#repayment:checked label {
+    background: black;
+    opacity: 0.7;
+}
+
+#repayment,
+#interest {
+    position: absolute;
+    inset: 0;
+    visibility: hidden;
+}
+
+label:has(input:checked) {
+    background: hsl(61, 70%, 52%, 0.1);
+    border: 1px solid hsl(61, 70%, 52%);
+}
